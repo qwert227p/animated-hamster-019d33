@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maiko 1.0 · Steal an Egg Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div class="brand">
+      <span class="seal" aria-hidden="true">舞</span>
+      <div>
+        <h1>Maiko <em>1.0</em></h1>
+        <p class="tag">Steal an Egg · item &amp; egg tracker</p>
+      </div>
+    </div>
+    <div class="top-r">
+      <span class="live" id="live"><i></i><b id="liveText">Connecting…</b></span>
+      <button class="btn ghost" id="scriptBtn" type="button">Get script</button>
+    </div>
+  </header>
+
+  <section class="totals" id="totals" aria-label="Totals"></section>
+
+  <section class="bar">
+    <input id="q" type="search" placeholder="Search username, item or egg…" aria-label="Search">
+    <div class="seg" id="seg" role="group" aria-label="Show">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="on" aria-pressed="false">Online</button>
+      <button type="button" data-f="off" aria-pressed="false">Offline</button>
+    </div>
+    <select id="sort" aria-label="Sort">
+      <option value="eggs">Most eggs</option>
+      <option value="items">Most items</option>
+      <option value="seen">Last seen</option>
+      <option value="name">Name</option>
+    </select>
+  </section>
+
+  <section class="cards" id="cards"></section>
+  <p class="empty" id="empty" hidden>No accounts reporting yet. Click <b>Get script</b>, then run it in Steal an Egg.</p>
+</main>
+
+<dialog id="acct" class="sheet">
+  <div class="sheet-h">
+    <img id="aImg" alt="" referrerpolicy="no-referrer">
+    <div><h2 id="aName"></h2><p id="aSub"></p></div>
+    <button class="btn ghost" type="button" data-close>Close</button>
+  </div>
+  <div class="sheet-stats" id="aStats"></div>
+  <div class="tabs" role="tablist">
+    <button type="button" role="tab" data-t="eggs" aria-selected="true">Eggs</button>
+    <button type="button" role="tab" data-t="items" aria-selected="false">Items</button>
+  </div>
+  <input id="aQ" type="search" placeholder="Filter…" aria-label="Filter list">
+  <ul class="list" id="aList"></ul>
+</dialog>
+
+<dialog id="script" class="sheet">
+  <div class="sheet-h">
+    <div><h2>Maiko reporter script</h2><p>Paste this into your executor while you're in Steal an Egg. It sends your eggs and items here every 20 seconds.</p></div>
+    <button class="btn ghost" type="button" data-close>Close</button>
+  </div>
+  <pre class="code" id="loader"></pre>
+  <div class="row"><button class="btn" id="copy" type="button">Copy</button><a class="btn ghost" href="/maiko.lua" target="_blank" rel="noopener">View full source</a></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

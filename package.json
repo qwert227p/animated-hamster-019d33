@@ -1,0 +1,29 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "this is web tracker for steal an egg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://x-access-token:ghs_13473_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRobmQiLCJjdHgiOiJ2QUdCaEptNzlIdW5CQXRaY2VpQzM4S1hnb2x3TS1TRDFKUjU2SVNWN0YtX1JsWm1Jai1fMkkyTE13IiwiZXhwIjoxNzkyMzk3MTI3LCJpYXQiOjE3OTIzOTM1MjcsImlzcyI6ImdpdGh1YiIsImp0aSI6IjFiMWQ0Nzg5LTVkZDItNGRmNS1iYzZjLWZlMjY0ZjVlY2RmMiIsInZlciI6M30.sSsvKvuUsF9Tg47gbEiyOQw04Oexh00cL7DmX9IwfP5bgYjFAIRPnjs_umLFQUBVfBH40qTG-LQfRmkkzGLuog@github.com/qwert227p/webtracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/qwert227p/webtracker/issues"
+  },
+  "homepage": "https://github.com/qwert227p/webtracker#readme",
+  "dependencies": {
+    "@netlify/database": "^2.0.1",
+    "@netlify/functions": "^6.0.2",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-beta.22"
+  }
+}
